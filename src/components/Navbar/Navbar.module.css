@@ -32,10 +32,26 @@
   list-style: none;
 }
 
-.menuItems a {
+.menuItems li a {
   font-size: 25px;
   color: var(--color-text);
   text-decoration: none;
+  position: relative;
+}
+
+.menuItems li a::after{
+  position: absolute;
+  content: '';
+  width: 0%;
+  height: 3px;
+  background: var(--color-dark);
+  left: 0;
+  bottom: -6px;
+  transition: width 0.5s;
+}
+
+.menuItems li a:hover::after{
+  width: 100%;
 }
 
 @media screen and (max-width: 830px) {

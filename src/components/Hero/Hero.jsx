@@ -19,6 +19,7 @@ export const Hero = () => {
         src={getImageUrl("hero/heroImage.png")}
         alt="Hero image of me"
         className={styles.heroImg}
+        loading="eager" // Add this line to prioritize loading
       />
       <div className={styles.topBlur} />
       <div className={styles.bottomBlur} />
