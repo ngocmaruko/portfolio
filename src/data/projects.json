@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Website A",
+    "imageSrc": "projects/project.png",
+    "description": "Description of Website A",
+    "skills": ["HTML", "CSS", "JavaScript"],
+    "demo": "https://example.com",
+    "source": "https://github.com/username/website-a",
+    "type": "websites"
+  },
+  {
+    "title": "Project A",
+    "imageSrc": "projects/project.png",
+    "description": "Description of Project A",
+    "skills": ["React", "Node.js"],
+    "demo": "https://project-a-demo.com",
+    "source": "https://github.com/username/project-a",
+    "type": "official"
+  },
+  {
+    "title": "Personal Project A",
+    "imageSrc": "projects/project.png",
+    "description": "Description of Personal Project A",
+    "skills": ["React", "CSS"],
+    "demo": "https://personal-project-a.com",
+    "source": "https://github.com/username/personal-project-a",
+    "type": "personal"
+  }
+]

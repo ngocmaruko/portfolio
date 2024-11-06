@@ -1,0 +1,14 @@
+:root {
+  --color-text: #7D655E; /* Darker beige for text */
+  --color-primary: #F2E4D7; /* Elegant beige color */
+  --color-secondary: #FFF; /* White */
+  --color-dark: #BC8F8F; /* Dark beige-based color */
+  --font-roboto:  'Muli', sans-serif;/* Font family */
+  --font-parisienne: "Parisienne", cursive;
+}
+
+body {
+  background: linear-gradient(to bottom right, var(--color-primary), var(--color-secondary));
+  color: var(--color-text);
+  font-family: var(--font-roboto);
+}
