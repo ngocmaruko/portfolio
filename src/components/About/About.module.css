@@ -43,20 +43,23 @@
   border-radius: 20px;
   list-style: none;
   padding: 25px;
-  background-image: linear-gradient(
-    90deg,
-    var(--color-dark) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  background-size: 100% 100%;
+  background-size: 100% 100%; /* Default size */
   background-repeat: no-repeat;
   transition: background-size 0.5s ease-in-out, color 0.4s ease-in-out;
   color: var(--color-secondary);
 }
 
-.aboutItem:hover {
-  background-size: 200% 100%; /* Zooming effect for the gradient */
-  color: var(--color-text);
+/* Odd items (1st, 3rd, 5th, ...) */
+.aboutItem:nth-child(odd) {
+  background-image: linear-gradient(
+    90deg,
+    var(--color-dark) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+/* Even items (2nd, 4th, 6th, ...) */
+.aboutItem:nth-child(even) {
   background-image: linear-gradient(
     90deg,
     rgba(255, 255, 255, 0) 0%,
@@ -64,6 +67,27 @@
   );
 }
 
+/* Hover effect for odd items */
+.aboutItem:nth-child(odd):hover {
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    var(--color-dark) 100%
+  );
+  background-size: 150% 100%; /* Increase background size for zoom effect */
+  color: var(--color-text);
+}
+
+/* Hover effect for even items */
+.aboutItem:nth-child(even):hover {
+  background-image: linear-gradient(
+    90deg,
+    var(--color-dark) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 150% 100%; /* Increase background size for zoom effect */
+  color: var(--color-text);
+}
 
 .aboutItem h3 {
   font-size: 25px;
@@ -79,6 +103,7 @@
     background-color: transparent;
     padding-left: 0;
     padding-right: 0;
+    margin-top: -20px;
   }
 
   .content {
@@ -91,10 +116,15 @@
 
   .aboutItems {
     margin-top: 29px;
+    gap: 30px;
   }
 
   .aboutItem {
     padding-left: 0;
     padding-right: 0;
+    padding: 10px;
+  }
+  .aboutItem div{
+    padding: 0 20px;
   }
 }

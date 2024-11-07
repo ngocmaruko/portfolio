@@ -20,16 +20,35 @@
 }
 
 .title {
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 1) 70%,
-    rgba(255, 255, 255, 0) 120%
-  );
-  -webkit-background-clip: text;
-  color: var(--color-text);
+  position: relative;
   font-size: 5rem;
   font-weight: 400;
   font-family: var(--font-parisienne);
+  color: var(--color-text);
+  overflow: hidden; /* Hide the text while typing */
+  white-space: nowrap; /* Prevent text from wrapping */
+  width: 0; /* Start with 0 width */
+  border-right: 2px solid var(--color-text); /* Cursor */
+  animation: typing 2s steps(20) 0.1s forwards, cursor-blink 0.75s step-end 1s;
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%; /* Expand the width to full text */
+    border-right: none; /* Hide the cursor after typing finishes */
+  }
+}
+
+@keyframes cursor-blink {
+  0%, 50% {
+    border-right: 2px solid var(--color-text); /* Show the cursor */
+  }
+  100% {
+    border-right: none; /* Remove the cursor completely */
+  }
 }
 
 .description {
@@ -116,6 +135,7 @@
   }
   .content {
     align-items: center;
+    margin-top: 30px;
   }
   .heroImg {
     width: 100%;

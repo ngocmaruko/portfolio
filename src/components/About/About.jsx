@@ -15,7 +15,6 @@ export const About = () => {
         />
         <ul className={styles.aboutItems}>
           <li className={styles.aboutItem}>
-            
             <div className={styles.aboutItemText}>
               <h3>Frontend Developer</h3>
               <p>
@@ -24,11 +23,19 @@ export const About = () => {
               </p>
             </div>
           </li>
-          
+
           <li className={styles.aboutItem}>
-            
             <div className={styles.aboutItemText}>
               <h3>UI Designer</h3>
+              <p>
+                I have designed multiple landing pages and have created design
+                systems as well
+              </p>
+            </div>
+          </li>
+          <li className={styles.aboutItem}>
+            <div className={styles.aboutItemText}>
+              <h3>EC Producer</h3>
               <p>
                 I have designed multiple landing pages and have created design
                 systems as well
