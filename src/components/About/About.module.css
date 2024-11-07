@@ -46,7 +46,6 @@
   background-size: 100% 100%; /* Default size */
   background-repeat: no-repeat;
   transition: background-size 0.5s ease-in-out, color 0.4s ease-in-out;
-  color: var(--color-secondary);
 }
 
 /* Odd items (1st, 3rd, 5th, ...) */
@@ -56,6 +55,8 @@
     var(--color-dark) 0%,
     rgba(255, 255, 255, 0) 100%
   );
+  color: var(--color-secondary);
+
 }
 
 /* Even items (2nd, 4th, 6th, ...) */
@@ -65,6 +66,7 @@
     rgba(255, 255, 255, 0) 0%,
     var(--color-dark) 100%
   );
+  color: var(--color-dark);
 }
 
 /* Hover effect for odd items */
